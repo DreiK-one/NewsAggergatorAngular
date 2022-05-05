@@ -1,0 +1,8 @@
+<div *ngIf="article">
+  <h3 [innerHTML]="article?.title"></h3>
+  <p [innerHTML]="article?.description"></p>
+  <div [style]='article?.image'></div>
+  <p><a href={{article?.sourceUrl}}>Read in the source</a></p>
+</div>
+  <!-- <button routerLink="/article/{{article.id}}">Details of {{article.title}}</button> -->
+

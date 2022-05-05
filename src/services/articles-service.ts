@@ -1,5 +1,5 @@
+import { ARTICLE_COLLECTION } from './../models/article_collection';
 import { ApiService } from './api.service';
-import { ARTICLE_COLLECTION } from '../models/article_collection';
 import { Injectable } from '@angular/core';
 import { Article } from 'src/models/article';
 import { Observable, of } from 'rxjs';
@@ -15,8 +15,8 @@ export class ArticlesService {
     return this.apiService.get('Articles').pipe();
   }
 
-  // getArticle(id: string): Observable<Article>{
-  //   const article = ARTICLE_COLLECTION.find(a => a.id === id)!;
-  //   return of(article);
-  // }
+  getArticle(id: string): Observable<Article>{
+    const article = ARTICLE_COLLECTION.find(a=>a.id === id)!;
+    return of(article);
+  }
 }

@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Article_listComponent } from './article_list/article_list.component';
 import { Article_previewComponent } from './article_preview/article_preview.component';
-import { MessagesComponent } from './messages/messages.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
     AppComponent,
       Article_listComponent,
       Article_previewComponent,
-      MessagesComponent,
       ArticleDetailsComponent,
    ],
   imports: [

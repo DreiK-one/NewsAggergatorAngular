@@ -1,6 +1,5 @@
 import { ArticlesService } from './../../services/articles-service';
 import { Article } from 'src/models/article';
-import { ARTICLE_COLLECTION } from './../../models/article_collection';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -17,7 +16,5 @@ export class Article_listComponent implements OnInit {
   ngOnInit(): void {
     this.articleService.getArticles()
       .subscribe(articles => this.articles = articles);
-
-
   }
 }

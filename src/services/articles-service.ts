@@ -16,7 +16,6 @@ export class ArticlesService {
   }
 
   getArticle(id: string): Observable<Article>{
-    const article = ARTICLE_COLLECTION.find(a=>a.id === id)!;
-    return of(article);
+    return this.apiService.get(`Articles/${id}`);
   }
 }

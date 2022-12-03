@@ -11,7 +11,8 @@ import { Article } from 'src/models/article';
 })
 export class ArticleDetailsComponent implements OnInit {
 
-  article? : Article
+  article? : Article;
+  img?: string;
 
   constructor(private route: ActivatedRoute,
     private location : Location,
@@ -20,8 +21,14 @@ export class ArticleDetailsComponent implements OnInit {
   ngOnInit() {
     const id = String(this.route.snapshot.paramMap.get('id'));
     this.articleService.getArticle(id)
-      .subscribe(art => this.article = art);
+      .subscribe(art => {
+        this.article = art;
+        let trimed: string[] = this.article!.image.split("'");
+        this.img = trimed[1];
+      });
   }
+
+  
 
   goBack(): void{
     this.location.back();

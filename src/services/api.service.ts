@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import * as queryString from 'query-string';
-
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +18,7 @@ export class ApiService {
 
   get(url: string, data: object = {}): Observable<any> {
     if (Object.keys(data).length > 0) {
-      url += '?' + queryString.stringify(data);
+      url += '?' + data;
     }
     return this.http.get(this.url(url));
   }

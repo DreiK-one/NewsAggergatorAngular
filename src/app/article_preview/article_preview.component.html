@@ -3,6 +3,14 @@
   <h3 [innerHTML]="article.title"></h3>
   <span><a href={{article.sourceUrl}}>Read in the source</a></span>
   <p [innerHTML]="article.description"></p>
-  <button type="button" class="read btn btn-primary" routerLink="/Articles/{{article.id}}">Read this article!</button>
+
+  <button 
+    type="button" 
+    class="read btn btn-primary" 
+    routerLink="/Articles/{{article.id}}"
+    >
+      Read this article!
+  </button>
+  
 </div>
 
